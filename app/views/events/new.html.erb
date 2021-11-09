@@ -1,0 +1,32 @@
+<h1> Bienvenue sur la page de création de tes events </h1>
+
+
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+  <%= label_tag "Titre de l'event" %>
+  <%= text_field_tag 'title', @event_title %>
+  <br /> <br />
+
+  <%= label_tag "Prix de l'event" %>
+  <%= text_field_tag 'title', @event_price %>
+  <br /> <br />
+
+  <%= label_tag "Localisation de l'event" %>
+  <%= text_field_tag 'title', @event_location %>
+  <br /> <br />
+
+
+  <%= label_tag "Jour & heure de l'event(ex : 2021-11-14 00:00:00 )" %>
+  <%= text_field_tag "Début de l'event", @event_price %>
+  <br /> <br />
+
+  <%= label_tag "Description de l'event" %>
+  <%= text_area_tag 'description', @event_description %>
+  <br /> <br />
+
+
+  
+
+  <%= submit_tag "Creer ton event" %>
+
+<% end %>
